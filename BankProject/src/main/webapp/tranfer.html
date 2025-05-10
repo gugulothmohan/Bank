@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transfer Amount</title>
+  <style>
+    body {
+     background-color: #e0f7fa;
+      display: flex;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    div.container {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00796b;
+    }
+
+    input[type="number"] {
+      font-size: 14px;
+      padding: 8px;
+      margin: 8px 0;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #00796b;
+      color: white;
+      font-size: 14px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Transfer Amount</h2>
+    <form action="transfer" method="post">
+      Sender Account ID: <input type="number" name="sender_id" required><br>
+      Receiver Account ID: <input type="number" name="receiver_id" required><br>
+      Amount: <input type="number" step="0.01" name="amount" required><br>
+      <input type="submit" value="Transfer">
+    </form>
+  </div>
+</body>
+</html>

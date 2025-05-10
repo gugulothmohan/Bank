@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/premium-vector/digital-finance-banking-investment-service-futuristic-bank-building-with-online-growth-graph_251139-785.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px 30px;
+            flex-wrap: wrap;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .nav-left a, .nav-right a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav-left a:hover, .nav-right a:hover {
+            color: #8fd19e;
+        }
+
+        .button-link {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-link:hover {
+            background-color: #45a049;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        marquee h1 {
+            font-size: 32px;
+            margin: 0;
+            padding: 15px;
+            text-shadow: 2px 2px 6px black;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        footer.footer-div {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-div a {
+            color: #8fd19e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-div a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-right {
+                margin-top: 10px;
+            }
+
+            marquee h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="nav-left">
+            <a href="#">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./Contact.html">Contacts</a>
+        </div>
+       
+        <div class="nav-right">
+            <a href="./reg.html" class="button-link">Sign Up</a>
+            <a href="./Admin_Login.jsp" class="button-link">Login</a>
+        </div>
+    </nav>
+
+    <marquee behavior="scroll" direction="left">
+        <h1>Welcome to ABC Bank - Safe, Secure, and Smart Banking</h1>
+    </marquee>
+</header>
+
+<div class="content">
+    <p>Welcome to ABC Bank! We offer innovative banking solutions tailored to your financial goals. Explore our services, connect with our team, and grow your wealth securely.</p>
+</div>
+
+<footer class="footer-div">
+    <p>&copy; 2025 ABC Bank. All rights reserved.</p>
+    <p>
+        <a href="#">@Service</a> |
+        <a href="#">@Privacy Policy</a> |
+        <a href="#">@Terms & Conditions</a> |
+        <a href="#">@Support</a>
+    </p>
+</footer>
+
+</body>
+</html>

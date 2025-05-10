@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+<style>
+body {
+	background-color: #ffcce0;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+	padding-top: 20px;
+}
+
+form {
+	background-color: #fff;
+	max-width: 500px;
+	margin: 20px auto;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+	color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"],
+	input[type="file"], select, textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type="submit"], input[type="reset"] {
+	width: 48%;
+	padding: 10px;
+	background-color: #ff66a3;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: bold;
+	margin-right: 4%;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+	background-color: #e05590;
+}
+
+.button-group {
+	display: flex;
+	justify-content: space-between;
+}
+</style>
+
+<script type="text/javascript">
+	function Display() {
+		var id = document.myform.id.value.trim();
+		var Fname = document.myform.Fname.value.trim();
+		var Lname = document.myform.Lname.value.trim();
+		var mail = document.myform.mail.value.trim();
+		var password = document.myform.password.value;
+		var conpassword = document.myform.conpassword.value;
+		var mobileno = document.myform.mobileno.value.trim();
+		var ad = document.myform.ad.value.trim();
+		var photo = document.myform.photo.value;
+
+		var passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>])/;
+
+		if (id == "") {
+			alert("Enter ID");
+			return false;
+		} else if (Fname == "") {
+			alert("Enter First Name");
+			return false;
+		} else if (Lname == "") {
+			alert("Enter Last Name");
+			return false;
+		} else if (mail == "") {
+			alert("Enter Email");
+			return false;
+		} else if (mobileno == "") {
+			alert("Enter Mobile Number");
+			return false;
+		} else if (password == "") {
+			alert("Enter Password");
+			return false;
+		} else if (!passwordRegex.test(password)) {
+			alert("Password must contain at least one uppercase letter, one number, and one special character");
+			return false;
+		} else if (conpassword == "") {
+			alert("Enter Confirm Password");
+			return false;
+		} else if (password !== conpassword) {
+			alert("Passwords do not match");
+			return false;
+		} else if (ad == "") {
+			alert("Enter Address");
+			return false;
+		} else if (photo == "") {
+			alert("Submit Photo");
+			return false;
+		}
+		return true;
+	}
+</script>
+
+</head>
+
+<body>
+	<h1>Registration Form</h1>
+	<form name="myform" action="maharshi" method="post"
+		enctype="multipart/form-data" onsubmit="return Display()">
+		<label>Id no:</label> <input type="text" name="id" /> <label>First
+			Name:</label> <input type="text" name="Fname" /> <label>Last Name:</label> <input
+			type="text" name="Lname" /> <label>User Email Id:</label> <input
+			type="email" name="mail" /> <label>Password:</label> <input
+			type="password" name="password" /> <label>Confirm Password:</label>
+		<input type="password" name="conpassword" /> <label>Phone
+			Number:</label> <input type="number" name="mobileno" /> <label>Enter
+			Address:</label>
+		<textarea name="ad"></textarea>
+
+		<label>Photo:</label> <input type="file" name="photo" /> <label>Role:</label>
+		<select name="role">
+			<option value="admin">admin</option>
+			<option value="user">user</option>
+		</select>
+
+		<div class="button-group">
+			<input type="submit" name="submit" value="Register" /> <input
+				type="reset" name="reset" value="Clear" />
+		</div>
+	</form>
+</body>
+</html>

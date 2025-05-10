@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Beneficiary</title>
+  <style type="text/css">
+    body {
+      background-color: pink;
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      padding: 10px;
+    }
+    .form-container {
+      max-width: 350px;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .form-container h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="number"],
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #f06292;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #ec407a;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Add Beneficiary</h2>
+    <form action="Benficery" method="post">
+      <label for="sender">Sender Account No:</label>
+      <input type="number" id="sender" name="num" required>
+
+      <label for="receiver">Receiver Account No:</label>
+      <input type="number" id="receiver" name="nums" required>
+
+      <label for="name">Enter Receiver Name:</label>
+      <input type="text" id="name" name="nm" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
