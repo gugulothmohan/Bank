@@ -28,8 +28,7 @@ public class AdminLoginServlet extends HttpServlet {
 				try (ResultSet rs = stmt.executeQuery()) {
 					if (rs.next()) {
 						String role = rs.getString("role");
-						String status = rs.getString("sta"
-								+ "tus");
+						String status = rs.getString("status");
 
 						HttpSession session = request.getSession();
 						session.setAttribute("admin", adminUsername);
